@@ -1,6 +1,6 @@
 <div align="center">
-<h1 align="center">Hi 👋, I'm < Julio Ríos/ > </h1>
-<h4 align="center">¡Bienvenido/a a mi perfil de GitHub! Soy un estudiante de ingeniería de sistemas apasionado por la programación y la tecnología. Aquí podrás conocer un poco más sobre mí y mis intereses.</h4>
+  <h1>Hi 👋, I'm Julio Ríos</h1>
+  <h4>¡Bienvenido/a a mi perfil de GitHub! Soy un estudiante de ingeniería de sistemas apasionado por la programación y la tecnología. Aquí podrás conocer un poco más sobre mí y mis intereses.</h4>
 </div>
 
 <div align="center">
