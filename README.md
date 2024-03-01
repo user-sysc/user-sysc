@@ -1,11 +1,6 @@
 <h1 align="center">Hi 👋, I'm Julio Ríos</h1>
 <h4 align="center">¡Bienvenido/a a mi perfil de GitHub! Soy un estudiante de ingeniería de sistemas apasionado por la programación y la tecnología. Aquí podrás conocer un poco más sobre mí y mis intereses.</h4>
 
-<div align="center">
-  <a href="https://1999azzar.github.io/1999AZZAR/">
-  <img  src="https://github.com/1999AZZAR/1999AZZAR/blob/main/resources/img/grid-snake.svg"
-       alt="snake" /></a>
-</div>
 
 ## Sobre Mí
 
