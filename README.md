@@ -25,17 +25,3 @@
 🤝 Si estás interesado/a en colaborar, estaré encantado/a de trabajar juntos.
 
 ¡Gracias por visitar mi perfil! Espero que encuentres algo interesante y útil mientras exploras mis proyectos y mi viaje en el mundo de la programación. ¡Conéctate conmigo en las redes sociales y sigamos aprendiendo juntos!👋
-
-
-## 📌 Contacto
-
-<a href="https://twitter.com/Juliocrm_" target="_blank">
-<img src=https://img.shields.io/badge/twitter-%2300acee.svg?color=1DA1F2&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
-</a>
-<a href="https://instagram.com/juliocrm__" target="_blank">
-<img src=https://img.shields.io/badge/instagram-%ff5851db.svg?color=C13584&style=for-the-badge&logo=instagram&logoColor=white alt=instagram style="margin-bottom: 5px;" />
-</a>
-<a href="mailto:riosjulio117@gmail.com" target="_blank">
-<img src="https://img.shields.io/badge/gmail  -%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" t=mail style="margin-bottom: 5px;" />
-</a>
-<br />
