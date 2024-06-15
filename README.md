@@ -2,7 +2,7 @@
 <h4 align="center">¡Bienvenido/a a mi perfil de GitHub! Soy un estudiante de ingeniería de sistemas apasionado por la programación y la tecnología. Aquí podrás conocer un poco más sobre mí y mis intereses.</h4>
 
 
-## Sobre Mí
+## About
 
 - 🎓 Estudiante de Ingeniería de Sistemas
 - 🚀 Apasionado por el desarrollo de software y la tecnología
