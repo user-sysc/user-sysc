@@ -24,7 +24,14 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 <br>
-🌟 ¡No dudes en explorar mis proyectos y dejar tus comentarios!
-🤝 Si estás interesado/a en colaborar, estaré encantado/a de trabajar juntos.
+🌟 ¡Gracias por visitar mi perfil! Espero que encuentres algo interesante y útil mientras exploras mis proyectos. ¡No dudes en explorar mis proyectos y dejar tus comentarios!🤝 Si estás interesado/a en colaborar, estaré encantado/a de trabajar juntos.
+</br>
 
-¡Gracias por visitar mi perfil! Espero que encuentres algo interesante y útil mientras exploras mis proyectos y mi viaje en el mundo de la programación. ¡Conéctate conmigo en las redes sociales y sigamos aprendiendo juntos!👋
+<br>
+<p align="center">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=user-sysc&theme=dark&show_icons=true&count_private=true" />
+  <br><br>
+  <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Mark streak" src="https://github-readme-streak-stats.herokuapp.com/?user=user-sysc&theme=dark&hide_border=false" />
+</p>
+</br>
+
