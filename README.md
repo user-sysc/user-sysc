@@ -22,6 +22,12 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2b%2b&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Xubuntu](https://img.shields.io/badge/Xubuntu-0078D6?style=for-the-badge&logo=xubuntu&logoColor=white)
+![Linux Mint](https://img.shields.io/badge/Linux%20Mint-87CF3E?style=for-the-badge&logo=linux-mint&logoColor=white)
+![Lubuntu](https://img.shields.io/badge/Lubuntu-0068C8?style=for-the-badge&logo=lubuntu&logoColor=white)
+
 
 <br>
 🌟 ¡Gracias por visitar mi perfil! Espero que encuentres algo interesante y útil mientras exploras mis proyectos. ¡No dudes en explorar mis proyectos y dejar tus comentarios!🤝 Si estás interesado/a en colaborar, estaré encantado/a de trabajar juntos.
