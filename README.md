@@ -27,14 +27,6 @@
 🌟 ¡Gracias por visitar mi perfil! Espero que encuentres algo interesante y útil mientras exploras mis proyectos. ¡No dudes en explorar mis proyectos y dejar tus comentarios!🤝 Si estás interesado/a en colaborar, estaré encantado/a de trabajar juntos.
 </br>
 
-<br>
-<p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=user-sysc&theme=tokyonight&show_icons=true&count_private=true" />
-  <br><br>
-  <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Mark streak" src="https://github-readme-streak-stats.herokuapp.com/?user=user-sysc&theme=tokyonight&hide_border=false" />
-</p>
-</br>
-
 <h2 align="center">Contact Me</h2>
 <div align="center" style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
     <a href="https://www.linkedin.com/in/julio-ríos-11336b245/" target="_blank">
@@ -50,3 +42,12 @@
         <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" style="margin: 5px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'"/>
     </a>
 </div>
+
+<br>
+<p align="center">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=user-sysc&theme=tokyonight&show_icons=true&count_private=true" />
+  <br><br>
+  <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Mark streak" src="https://github-readme-streak-stats.herokuapp.com/?user=user-sysc&theme=tokyonight&hide_border=false" />
+</p>
+</br>
+
