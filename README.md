@@ -1,10 +1,6 @@
 <h1 align="center">Hi 👋, I'm Julio Ríos</h1>
 <h4 align="center">¡Bienvenido/a a mi perfil de GitHub! Soy un estudiante de ingeniería de sistemas apasionado por la programación y la tecnología. Aquí podrás conocer un poco más sobre mí y mis intereses.</h4>
 
-<p align="center">
-  <img  src="https://raw.githubusercontent.com/Elanza-48/Elanza-48/main/resources/img/github-contribution-grid-snake.svg"
-    alt="example" />
-</p>
 
 ## About
 
