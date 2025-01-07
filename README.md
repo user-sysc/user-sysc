@@ -51,12 +51,5 @@
     </a>
 </div>
 
-<br>
-<p align="center">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=user-sysc&theme=tokyonight&show_icons=true&count_private=true" />
-  <br><br>
-  <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Mark streak" src="https://github-readme-streak-stats.herokuapp.com/?user=user-sysc&theme=tokyonight&hide_border=false" />
-</p>
-</br>
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=7B68EE&height=120&section=footer"/>
