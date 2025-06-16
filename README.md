@@ -5,8 +5,6 @@
 
 
 ## About Me
-
-Desarrollador Backend Junior con experiencia en el diseño e integración de APIs robustas y escalables con Node.js, Express.js y FastAPI. Sólidos conocimientos en bases de datos (PostgreSQL, MySQL, MongoDB). También tengo experiencia en tecnologías frontend, aportando una visión integral del ciclo de desarrollo y una colaboración más efectiva en equipos multidisciplinarios. Siempre en busca de oportunidades de crecimiento profesional en equipos dinámicos, donde aportar soluciones limpias y seguir aprendiendo.
 - 🎓 Estudiante de Ingeniería de Sistemas
 - 🚀 Apasionado por el desarrollo de software y la tecnología
 - 🌐 Explorando nuevas herramientas y lenguajes de programación
