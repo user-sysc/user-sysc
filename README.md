@@ -2,41 +2,65 @@
 
 # Hi 👋, I'm Julio Ríos
 
-¡Bienvenido/a a mi perfil!  
-Soy un estudiante de ingeniería de sistemas apasionado por la programación y la tecnología. Aquí podrás conocer un poco más sobre mí y mis intereses.
-
 ## About Me
-- 🌿 Tratando de convertirme en una mejor persona cada día.
-- ⌛ Disfruto del desarrollo personal y la productividad.
-- 🌐 Explorando nuevas herramientas y lenguajes de programación.
+
+💻 I'm a systems engineering student passionate about programming and technology. Here you can learn a bit more about me and my interests.
+
+- 🌿 Always trying to become a better person every day.
+- ⌛ I enjoy personal growth and productivity.
+- 🌐 Exploring new tools and programming languages, especially on the backend side.
 
 ## 📚 Skills and Tools
 
-![Python](https://img.shields.io/badge/Python%20-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code%20-%23007ACC.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2b%2b&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+<div align="left">
+  <img src="https://skillicons.dev/icons?i=python" height="40" alt="python logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nodejs" height="40" alt="nodejs logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=express" height="40" alt="expressjs logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=fastapi" height="40" alt="fastapi logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=mysql" height="40" alt="mysql logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="nextjs logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=docker" height="40" alt="docker logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="vscode logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=linux" height="40" alt="linux logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=cpp" height="40" alt="c++ logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=bash" height="40" alt="bash logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=postman" height="40" alt="postman logo" />
+  <img width="12" />
+  <img src="https://skillicons.dev/icons?i=md" height="40" alt="markdown logo" />
+</div>
 
 ---
 
-🌟 ¡Gracias por visitar mi perfil!  
-Espero que encuentres algo interesante y útil mientras exploras mis proyectos.  
-¡No dudes en explorar mis repositorios y dejar tus comentarios!  
-🤝 Si estás interesado/a en colaborar, estaré encantado/a de trabajar juntos.
+🌟 Thank you for visiting my profile!  
+I hope you find something interesting and useful while exploring my projects.  
+Feel free to check my repositories and leave your feedback!  
+🤝 If you're interested in collaborating, I'd be happy to work together.
 
 ## Contact Me
 
-[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:riosjulio117@gmail.com)
+[![Email](https://img.shields.io/badge/riosjulio117@gmail.com-email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:riosjulio117@gmail.com)
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=7B68EE&height=120&section=footer"/>
