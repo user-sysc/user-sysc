@@ -29,6 +29,8 @@
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo" />
   <img width="12" />
+  <img src="https://skillicons.dev/icons?i=mongodb" height="40" alt="mongodb logo" />
+  <img width="12" />
   <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" />
   <img width="12" />
   <img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="nextjs logo" />
@@ -52,8 +54,7 @@
   <img src="https://skillicons.dev/icons?i=md" height="40" alt="markdown logo" />
 </div>
 
----
-
+</br>
 🌟 Thank you for visiting my profile!  
 I hope you find something interesting and useful while exploring my projects.  
 Feel free to check my repositories and leave your feedback!  
