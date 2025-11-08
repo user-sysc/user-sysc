@@ -66,6 +66,12 @@ Feel free to check my repositories and leave your feedback!
 
 ## Contact Me
 
-[![Email](https://img.shields.io/badge/riosjulio117@gmail.com-email-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:riosjulio117@gmail.com)
-
+<div style="display: flex; gap: 10px; align-items: center;">
+  <a href="mailto:riosjulio117@gmail.com" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/email-riosjulio117@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010" alt="Email">
+  </a>
+  <a href="https://www.linkedin.com/in/juliocrm-" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/LinkedIn-juliocrm--0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010&color=0077B5" alt="LinkedIn">
+  </a>
+</div>
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=7B68EE&height=120&section=footer"/>
