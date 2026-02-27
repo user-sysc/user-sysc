@@ -37,11 +37,8 @@
 ## What I'm Doing
 
 - **Living in the future** — Learning how LLMs and agentic workflows can enhance real-world software engineering
-
 - **Building practical software projects** — Designing scalable applications with clean architecture and solid engineering principles
-
 - **Rapid prototyping** - Full apps in days, not months
-
 - **Optimizing my development workflow** — Leveraging automation, CLI tools, and AI copilots to improve productivity and code quality
 
 ## Connect
