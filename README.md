@@ -22,13 +22,12 @@
 - Databases: **PostgreSQL**, **MySQL**, **MongoDB**
 - Writing cleaner code, better architecture, and improving consistency
 
-## Current projects
+## Featured Projects
 
-- 🚀 **Project 1** — short description. *(link)*
-- 🧩 **Project 2** — short description. *(link)*
-- 🧠 **Project 3** — short description. *(link)*
-
-> Tip: keep 3–6 max. Pin them in your GitHub profile so they match this section.
+- 🐾 **[Findapet](https://github.com/JormanNoriega/Findapet)** — Platform for reporting and finding lost pets.
+- 🏛️ **[University Visibility Platform](https://github.com/JormanNoriega/Sistemas-Back)** — Backend system connecting the university with external stakeholders. 
+- 💰 **[WalletGO](https://github.com/user-sysc/mern-project-walletgo)** — Personal finance manager.
+- 🌐 **[Portfolio](https://github.com/user-sysc/portfolio-astro)** — Personal developer portfolio built with Astro.
 
 ## GitHub Activity
 
