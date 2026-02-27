@@ -16,12 +16,6 @@
 
 > Deep in vibe-coding mode — exploring AI-assisted development workflows and building scalable software systems as a Systems Engineering student.
 
-## What I'm focusing on
-
-- Building **REST APIs** and backend services (Python/Node)
-- Databases: **PostgreSQL**, **MySQL**, **MongoDB**
-- Writing cleaner code, better architecture, and improving consistency
-
 ## Featured Projects
 
 - 🐾 **[Findapet](https://github.com/JormanNoriega/Findapet)** — Platform for reporting and finding lost pets.
