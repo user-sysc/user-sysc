@@ -14,7 +14,7 @@
 ![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-> I’m a systems engineering student focused on building backend services, APIs, and practical projects. I enjoy learning new tools, improving every day, and collaborating with others.
+> Deep in vibe-coding mode — exploring AI-assisted development workflows and building scalable software systems as a Systems Engineering student.
 
 ## What I'm focusing on
 
@@ -50,12 +50,4 @@
 [![LinkedIn](https://img.shields.io/badge/-Julio_Rios-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juliocrm-/)
 [![GitHub](https://img.shields.io/badge/-Follow-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/user-sysc)
 
----
-<details>
-<summary>More about me</summary>
 
-- 🌿 Always trying to become a better person every day  
-- ⌛ Personal growth & productivity  
-- 🌐 Exploring new tools and programming languages, especially backend  
-
-</details>
