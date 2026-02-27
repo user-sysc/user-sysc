@@ -1,77 +1,52 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=87A2A2&height=120&section=header"/>
+# Hi, I'm Julio 👋
 
-# Hi 👋, I'm Julio Ríos
+📍 **Valledupar ↔ Colombia** | 💻 **Software Developer** | ⚙️ **Backend & Cloud** | 🧠 **Systems Engineering Student**
 
-## About Me
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Node.js](https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Express](https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Claude](https://img.shields.io/badge/-Claude-000000?style=flat-square&logo=anthropic&logoColor=white)
+![CLI](https://img.shields.io/badge/-CLI-000000?style=flat-square&logo=gnu-bash&logoColor=white)
+![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-💻 I'm a systems engineering student passionate about programming and technology. Here you can learn a bit more about me and my interests.
+> I’m a systems engineering student focused on building backend services, APIs, and practical projects. I enjoy learning new tools, improving every day, and collaborating with others.
 
-- 🌿 Always trying to become a better person every day.
-- ⌛ I enjoy personal growth and productivity.
-- 🌐 Exploring new tools and programming languages, especially on the backend side.
+## What I'm focusing on
 
-## 📚 Skills and Tools
+- Building **REST APIs** and backend services (Python/Node)
+- Databases: **PostgreSQL**, **MySQL**, **MongoDB**
+- Writing cleaner code, better architecture, and improving consistency
 
-<div align="left">
-  <img src="https://skillicons.dev/icons?i=python" height="40" alt="python logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nodejs" height="40" alt="nodejs logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=js" height="40" alt="javascript logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=ts" height="40" alt="typescript logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=express" height="40" alt="expressjs logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=fastapi" height="40" alt="fastapi logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=flask" height="40" alt="flask logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=django" height="40" alt="django logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=mysql" height="40" alt="mysql logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=postgres" height="40" alt="postgresql logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=mongodb" height="40" alt="mongodb logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=react" height="40" alt="react logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="nextjs logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=docker" height="40" alt="docker logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=git" height="40" alt="git logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=vscode" height="40" alt="vscode logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=linux" height="40" alt="linux logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=cpp" height="40" alt="c++ logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=tailwind" height="40" alt="tailwindcss logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=bash" height="40" alt="bash logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=postman" height="40" alt="postman logo" />
-  <img width="12" />
-  <img src="https://skillicons.dev/icons?i=md" height="40" alt="markdown logo" />
-</div>
+## Featured projects
 
-</br>
-🌟 Thank you for visiting my profile!  
-I hope you find something interesting and useful while exploring my projects.  
-Feel free to check my repositories and leave your feedback!  
-🤝 If you're interested in collaborating, I'd be happy to work together.
+- 🚀 **Project 1** — short description. *(link)*
+- 🧩 **Project 2** — short description. *(link)*
+- 🧠 **Project 3** — short description. *(link)*
 
-## Contact Me
+> Tip: keep 3–6 max. Pin them in your GitHub profile so they match this section.
 
-<div style="display: flex; gap: 10px; align-items: center;">
-  <a href="mailto:riosjulio117@gmail.com" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/email-riosjulio117@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010" alt="Email">
-  </a>
-  <a href="https://www.linkedin.com/in/juliocrm-" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/LinkedIn-juliocrm--0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010&color=0077B5" alt="LinkedIn">
-  </a>
-</div>
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=819C9E&height=120&section=footer"/>
+## GitHub Activity
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=user-sysc&show_icons=true&hide_title=true&include_all_commits=true&count_private=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=user-sysc&layout=compact)
+
+## Connect
+
+[![Email](https://img.shields.io/badge/-riosjulio117%40gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:riosjulio117@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/-juliocrm--0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/juliocrm-/)
+[![GitHub](https://img.shields.io/badge/-Follow-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/user-sysc)
+
+---
+<details>
+<summary>More about me</summary>
+
+- 🌿 Always trying to become a better person every day  
+- ⌛ Personal growth & productivity  
+- 🌐 Exploring new tools and programming languages, especially backend  
+
+</details>
