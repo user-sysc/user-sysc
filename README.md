@@ -18,7 +18,7 @@
 
 ## Featured Projects
 
-- 🐾 **[Findapet](https://github.com/JormanNoriega/Findapet)** — Platform for reporting and finding lost pets.
+- 🐾 **[Findapet](https://github.com/JormanNoriega/Findapet)** — App for reporting and finding lost pets.
 - 🏛️ **[University Visibility Platform](https://github.com/JormanNoriega/Sistemas-Back)** — Backend system connecting the university with external stakeholders. 
 - 💰 **[WalletGO](https://github.com/user-sysc/mern-project-walletgo)** — Personal finance manager.
 - 🌐 **[Portfolio](https://github.com/user-sysc/portfolio-astro)** — Personal developer portfolio built with Astro.
