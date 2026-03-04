@@ -1,0 +1,499 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xurl}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\geometry{left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+%--------------------------------------------------------------
+% PORTADA
+%--------------------------------------------------------------
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    {\large \textbf{UNIVERSIDAD POPULAR DEL CESAR}}\par
+    \vspace{0.3cm}
+    {\large FACULTAD DE INGENIERÍA{}S Y TECNOLOGÍAS}\par
+    \vspace{3cm}
+    {\LARGE \textbf{TALLER PRÁCTICO DE MODELACIÓN:\\[0.4em]
+    IDENTIFICACIÓN DE SISTEMAS Y CONDICIONES DE FRONTERA}}\par
+    \vspace{3cm}
+    {\large \textbf{Autores:}}\par
+    \vspace{0.3cm}
+    {\large Jorman David Noriega Dávila}\par
+    {\large Julio Cesar Ríos Maldonado}\par
+    \vspace{3cm}
+    {\large \textbf{Programa:} INGENIERÍA DE SISTEMAS}\par
+    \vspace{0.3cm}
+    {\large \textbf{Asignatura:} MODELOS Y SIMULACIÓN}\par
+    \vspace{3cm}
+    {\large MARZO DE 2026}\par
+    \vspace{0.3cm}
+    {\large VALLEDUPAR}\par
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%==============================================================
+\section*{CASO DE ESTUDIO 1: TERMODINÁMICA DE UN EXTRUSOR 3D}
+\addcontentsline{toc}{section}{Caso de Estudio 1: Termodinámica de un Extrusor 3D}
+%==============================================================
+
+\noindent\textbf{Contexto:} Sistema de control de temperatura para el hotend de una impresora FDM.
+Filamento de PLA sólido a temperatura ambiente ingresa por la parte superior de un tubo metálico.
+Un bloque calentador de aluminio (con cartucho eléctrico) funde el plástico, el cual sale por una
+boquilla de latón de 0.4~mm. Un ventilador sopla aire continuamente sobre las aletas superiores
+del tubo para evitar fusión prematura.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 1 -- Fronteras y Sistema}
+\addcontentsline{toc}{subsection}{Pregunta 1 -- Fronteras y Sistema}
+%--------------------------------------------------------------
+
+\noindent El sistema se define como la masa de plástico (filamento PLA) contenida dentro del tubo
+metálico, desde el punto de entrada superior hasta la boquilla de salida inferior.
+Las fronteras son:
+
+\begin{itemize}
+    \item \textbf{Frontera superior (entrada):} Plano transversal donde el filamento PLA sólido a
+          temperatura ambiente (${\sim}25$~°C) ingresa al tubo. Es una frontera de tipo
+          \textit{inlet} con temperatura conocida.
+
+    \item \textbf{Frontera inferior (salida/boquilla):} Plano donde el plástico fundido sale por la
+          boquilla de 0.4~mm. Aquí el plástico abandona el sistema.
+
+    \item \textbf{Frontera lateral:} La interfaz entre el plástico y la pared interior del tubo
+          metálico. A través de esta frontera se produce la transferencia de calor (del bloque
+          calentador hacia el plástico en la parte baja, y extracción de calor en la parte alta por
+          el ventilador).
+
+    \item El metal (tubo, bloque calentador, aletas) y el aire impulsado por el ventilador son
+          \textbf{entorno}, no sistema.
+\end{itemize}
+
+\noindent A continuación se muestra un diagrama esquemático del hotend con las fronteras
+identificadas:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[>=latex, thick, font=\small]
+
+    % --- tubo metálico ---
+    \fill[gray!25] (-0.6,4) rectangle (0.6,0.5);
+    \draw[gray!60, line width=0.8pt] (-0.6,4) rectangle (0.6,0.5);
+
+    % --- bloque calentador ---
+    \fill[orange!40] (-0.8,0.5) rectangle (0.8,-0.5);
+    \draw[orange!70, line width=0.8pt] (-0.8,0.5) rectangle (0.8,-0.5);
+    \node at (0,0) {Bloque calentador};
+
+    % --- boquilla ---
+    \fill[yellow!50] (-0.25,-0.5) -- (0.25,-0.5) -- (0.15,-1) -- (-0.15,-1) -- cycle;
+    \draw[yellow!80!black, line width=0.8pt]
+        (-0.25,-0.5) -- (0.25,-0.5) -- (0.15,-1) -- (-0.15,-1) -- cycle;
+    \node[right=0.4cm] at (0.25,-0.75) {Boquilla 0.4~mm};
+
+    % --- filamento entrante ---
+    \draw[->, blue!70!black, line width=1.2pt] (0,5.2) -- (0,4.05);
+    \node[right=0.2cm] at (0,5.2) {\textbf{Filamento PLA}};
+    \node[right=0.2cm] at (0,4.75) {$T_{amb}\approx25$~°C};
+
+    % --- plástico fundido saliente ---
+    \draw[->, red!70!black, line width=1.2pt] (0,-1.05) -- (0,-1.7);
+    \node[right=0.15cm] at (0,-1.4) {Plástico fundido};
+
+    % --- ventilador / convección lateral ---
+    \draw[->, cyan!70!black, line width=1pt] (-1.8,3.5) -- (-0.62,3.5);
+    \draw[->, cyan!70!black, line width=1pt] (-1.8,3.0) -- (-0.62,3.0);
+    \draw[->, cyan!70!black, line width=1pt] (-1.8,2.5) -- (-0.62,2.5);
+    \node[left=0.1cm] at (-1.8,3.0) {Ventilador};
+
+    % --- etiquetas de fronteras ---
+    % Frontera superior
+    \draw[dashed, red, line width=0.8pt] (-0.8,4) -- (0.8,4);
+    \node[right=0.15cm, red] at (0.8,4) {\textbf{Frontera superior}};
+    \node[right=0.15cm, red] at (0.8,3.65) {(Dirichlet: $T=T_{amb}$)};
+
+    % Frontera lateral
+    \draw[dashed, blue!70, line width=0.8pt] (0.62,3.0) -- (1.8,3.0);
+    \node[right=0.1cm, blue!70] at (1.8,3.1) {\textbf{Frontera lateral}};
+    \node[right=0.1cm, blue!70] at (1.8,2.75) {(Robin: convección)};
+
+    % Frontera inferior
+    \draw[dashed, green!60!black, line width=0.8pt] (-0.85,-0.5) -- (0.85,-0.5);
+    \node[right=0.15cm, green!60!black] at (0.85,-0.5) {\textbf{Frontera inferior}};
+    \node[right=0.15cm, green!60!black] at (0.85,-0.8) {(Salida/boquilla)};
+
+    % Eje axial
+    \draw[dotted, gray] (0,4) -- (0,0.5);
+    \node[left=0.05cm, gray] at (0,2.25) {$x$};
+    \draw[->, gray] (0,2.5) -- (0,1.8);
+
+\end{tikzpicture}
+\caption{Diagrama esquemático del hotend FDM con fronteras del sistema identificadas.}
+\label{fig:hotend}
+\end{figure}
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 2 -- Parámetros vs.\ Variables}
+\addcontentsline{toc}{subsection}{Pregunta 2 -- Parámetros vs. Variables}
+%--------------------------------------------------------------
+
+\noindent\textbf{Parámetros físicos:}
+\begin{enumerate}
+    \item \textbf{Conductividad térmica del PLA:} $k_{PLA}$ [W/(m·K)] --- constante que
+          caracteriza cuánto calor conduce el material.
+    \item \textbf{Calor específico del PLA:} $c_p$ [J/(kg·K)] --- determina cuánta energía se
+          necesita para elevar la temperatura del material.
+    \item \textbf{Densidad del PLA:} $\rho$ [kg/m³].
+    \item \textbf{Potencia del cartucho calentador:} $\dot{Q}_{calentador}$ [W] --- parámetro de
+          entrada al sistema.
+\end{enumerate}
+
+\noindent\textbf{Variable de estado principal:} La temperatura del plástico $T(x, t)$ [°C o K],
+que varía a lo largo del eje axial del tubo ($x$) y en el tiempo ($t$).
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 3 -- Condiciones de Frontera}
+\addcontentsline{toc}{subsection}{Pregunta 3 -- Condiciones de Frontera}
+%--------------------------------------------------------------
+
+\noindent\textbf{Frontera de entrada (plástico frío):}
+
+En la entrada superior, la temperatura del plástico es conocida e igual a la temperatura ambiente.
+Esta es una condición de \textbf{Dirichlet} (condición de primer tipo), porque se prescribe
+directamente el valor de la variable dependiente (temperatura).
+
+\begin{equation}
+    T\big|_{x=0} = T_{amb} = 25\,\text{°C} \qquad \text{(Condición de Dirichlet)}
+\end{equation}
+
+\noindent\textbf{Frontera lateral (metal enfriado por ventilador):}
+
+En la frontera lateral del metal donde actúa el ventilador, el flujo de calor depende de la
+diferencia entre la temperatura de la superficie y la del aire. Esto corresponde a una condición
+de \textbf{Robin} (condición de tercer tipo o convectiva):
+
+\begin{equation}
+    -k \frac{\partial T}{\partial n}\bigg|_{\text{lateral}} = h\,(T_{sup} - T_{\infty})
+\end{equation}
+
+\noindent donde $h$ es el coeficiente de convección forzada del ventilador, $T_{sup}$ es la
+temperatura de la superficie del metal y $T_{\infty}$ es la temperatura del aire. No se prescribe
+el valor de $T$ ni el flujo por separado, sino una combinación lineal de ambos.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 4 -- Decisión de Modelado (¿Parámetros concentrados?)}
+\addcontentsline{toc}{subsection}{Pregunta 4 -- Decisión de Modelado}
+%--------------------------------------------------------------
+
+\noindent\textbf{No se puede modelar el plástico dentro del tubo como sistema de parámetros
+concentrados.} Justificación:
+
+\begin{itemize}
+    \item \textbf{Criterio físico:} El tubo tiene una longitud considerable (${\sim}30$--$40$~mm en
+          hotends típicos) y el plástico experimenta un gradiente de temperatura fuerte y no uniforme
+          a lo largo del eje axial: a la entrada está a ${\sim}25$~°C (sólido) y en la punta
+          (boquilla) debe estar a ${\sim}210$~°C (fundido). La temperatura \textbf{NO} es homogénea
+          en el espacio.
+
+    \item \textbf{Criterio matemático (Número de Biot):} Para que un sistema de parámetros
+          concentrados sea válido, se requiere:
+          \begin{equation}
+              Bi = \frac{h\,L_c}{k} \ll 0.1
+          \end{equation}
+          El PLA tiene baja conductividad térmica ($k \approx 0.13$~W/(m·K)), lo que implica un
+          $Bi$ elevado, indicando que los gradientes espaciales internos son significativos y
+          \textbf{NO} pueden despreciarse.
+
+    \item \textbf{Conclusión:} Se requiere un modelo de \textbf{parámetros distribuidos}, descrito
+          por una Ecuación Diferencial Parcial (EDP) de calor unidimensional:
+          \begin{equation}
+              \rho\,c_p\,\frac{\partial T}{\partial t} = k\,\frac{\partial^2 T}{\partial x^2}
+              + \dot{q}(x,t)
+          \end{equation}
+\end{itemize}
+
+\newpage
+
+%==============================================================
+\section*{CASO DE ESTUDIO 2: INSTALACIÓN DE UN ARREGLO DE PANELES SOLARES}
+\addcontentsline{toc}{section}{Caso de Estudio 2: Instalación de un Arreglo de Paneles Solares}
+%==============================================================
+
+\noindent\textbf{Contexto:} Sistema fotovoltaico sobre techo en zona de alta temperatura y
+radiación. El panel convierte parte de la luz en electricidad y otra parte en calor residual.
+Transfiere calor al aire de la calle (cara superior, expuesta al viento) y al aire estancado entre
+panel y tejas (cara inferior). La energía eléctrica generada fluye hacia un banco de baterías de
+litio dentro de la casa.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 1 -- Sistemas Múltiples}
+\addcontentsline{toc}{subsection}{Pregunta 1 -- Sistemas Múltiples}
+%--------------------------------------------------------------
+
+\noindent\textbf{Sistema 1 -- Dominio Térmico (el panel solar):}
+
+\begin{itemize}
+    \item \textbf{Sistema:} El panel fotovoltaico (celda + encapsulante + vidrio).
+    \item \textbf{Entradas:} Irradiancia solar $G$ [W/m²], temperatura del aire exterior $T_{amb}$,
+          velocidad del viento.
+    \item \textbf{Salidas:} Temperatura del panel $T_{panel}$, potencia eléctrica generada
+          $P_{elec}$ (que sale del dominio térmico hacia el dominio eléctrico).
+    \item \textbf{Ecuación gobernante} (balance de energía térmica):
+          \begin{equation}
+              G \cdot \alpha = P_{elec} + Q_{conv\_sup} + Q_{conv\_inf}
+          \end{equation}
+\end{itemize}
+
+\noindent\textbf{Sistema 2 -- Dominio Eléctrico (banco de baterías):}
+
+\begin{itemize}
+    \item \textbf{Sistema:} El banco de baterías de litio y el circuito de carga.
+    \item \textbf{Entradas:} Potencia eléctrica generada por el panel $P_{elec}(t)$ [W].
+    \item \textbf{Salidas:} Estado de Carga (SOC) de las baterías, voltaje y corriente del banco.
+    \item \textbf{Ecuación gobernante:}
+          \begin{equation}
+              \frac{d(\text{SOC})}{dt} = \frac{I(t)}{C_{\text{batería}}}
+          \end{equation}
+\end{itemize}
+
+\noindent\textbf{Interconexión:} La salida eléctrica del Sistema~1 ($P_{elec}$) es la entrada del
+Sistema~2. La temperatura del panel (Sistema~1) afecta la eficiencia y por tanto $P_{elec}$,
+creando un acoplamiento bidireccional.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 2 -- Condiciones de Frontera Térmicas (Radiación Solar)}
+\addcontentsline{toc}{subsection}{Pregunta 2 -- Condiciones de Frontera Térmicas}
+%--------------------------------------------------------------
+
+\noindent La radiación solar de 1000~W/m² representa una condición de \textbf{Neumann}
+(condición de segundo tipo).
+
+\noindent\textbf{Justificación:} Una condición de Neumann prescribe el \textbf{flujo} (derivada
+normal) de la variable dependiente en la frontera, no su valor. En este caso, se conoce el flujo
+de calor entrante por unidad de área:
+
+\begin{equation}
+    -k\frac{\partial T}{\partial n}\bigg|_{\text{cara superior}} = q''_{solar}
+    = 1000\,\text{W/m}^2
+\end{equation}
+
+\noindent No se prescribe la temperatura (eso sería Dirichlet), sino la cantidad de energía que
+atraviesa la frontera por unidad de tiempo y área. Por eso es condición de \textbf{Neumann}.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 3 -- La Condición de Robin (cara superior con viento)}
+\addcontentsline{toc}{subsection}{Pregunta 3 -- La Condición de Robin}
+%--------------------------------------------------------------
+
+\noindent La cara superior del panel, barrida por ráfagas de viento, exige una condición de
+\textbf{Robin} porque simultáneamente ocurren dos fenómenos en esa misma frontera:
+
+\begin{enumerate}
+    \item El panel recibe flujo de calor por radiación (Neumann parcial).
+    \item El panel intercambia calor con el aire por \textbf{convección forzada} (dependiente de
+          la temperatura).
+\end{enumerate}
+
+\noindent La condición de Robin combina la temperatura de la superficie y el gradiente en la
+frontera:
+
+\begin{equation}
+    -k\frac{\partial T}{\partial n}\bigg|_{sup} = h_{conv}\,(T_{sup} - T_{\infty})
+\end{equation}
+
+\noindent\textbf{Variables que interactúan:}
+\begin{itemize}
+    \item $T_{sup}$: temperatura de la superficie del panel [°C o K].
+    \item $T_{\infty}$: temperatura del aire ambiente [°C o K].
+    \item $h_{conv}$: coeficiente de convección forzada por el viento [W/(m²·K)] --- variable
+          porque depende de la velocidad del viento.
+    \item $k$: conductividad térmica del panel [W/(m·K)].
+    \item $\dfrac{\partial T}{\partial n}$: gradiente de temperatura en dirección normal a la
+          superficie.
+\end{itemize}
+
+\noindent La condición no puede ser solo Dirichlet (no se conoce $T_{sup}$) ni solo Neumann (el
+flujo depende de $T_{sup}$), sino la combinación \textbf{Robin}.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 4 -- Distribuidos vs.\ Concentrados}
+\addcontentsline{toc}{subsection}{Pregunta 4 -- Distribuidos vs. Concentrados}
+%--------------------------------------------------------------
+
+\noindent\textbf{Temperatura de una celda solar a lo largo del día $\rightarrow$ Modelo
+CONCENTRADO:}
+
+\begin{itemize}
+    \item A lo largo del día, interesa cómo evoluciona la temperatura de la celda \textbf{en el
+          tiempo} ($T_{celda}(t)$).
+    \item Una celda solar es pequeña (del orden de cm), tiene alta conductividad y el gradiente
+          espacial interno es pequeño en comparación con las variaciones temporales.
+    \item Se verifica $Bi \ll 0.1$, por lo que la temperatura puede considerarse uniforme en todo
+          el volumen de la celda en cada instante.
+    \item Modelo resultante (EDO):
+          \begin{equation}
+              m\,c_p\,\frac{dT_{celda}}{dt} = \dot{Q}_{rad} - \dot{Q}_{conv} - P_{elec}
+          \end{equation}
+\end{itemize}
+
+\noindent\textbf{SOC del banco de baterías $\rightarrow$ Modelo CONCENTRADO:}
+
+\begin{itemize}
+    \item El SOC representa la carga total almacenada en todo el banco como una sola cantidad
+          escalar.
+    \item No interesa la distribución espacial de la carga dentro de cada batería, sino el nivel
+          global de energía.
+    \item El banco se modela como un único ``depósito'' de energía:
+          \begin{equation}
+              \frac{d(\text{SOC})}{dt} = \frac{\eta \cdot I(t)}{C_{nominal}}
+          \end{equation}
+    \item Modelo resultante: EDO simple $\rightarrow$ parámetros concentrados.
+\end{itemize}
+
+\noindent\textbf{Contraste:} Ambos casos usan modelos concentrados, pero por razones distintas:
+la celda porque es físicamente pequeña (gradientes espaciales despreciables), y el banco de
+baterías porque el SOC es por definición una variable integral/global que no tiene distribución
+espacial relevante para el control.
+
+\newpage
+
+%==============================================================
+\section*{CASO DE ESTUDIO 3: VIBRACIÓN EN EL ESLABÓN DE UN BRAZO ROBÓTICO}
+\addcontentsline{toc}{section}{Caso de Estudio 3: Vibración en el Eslabón de un Brazo Robótico}
+%==============================================================
+
+\noindent\textbf{Contexto:} Brazo robótico industrial con eslabón de aluminio de 1.5~m de
+longitud. Al frenar bruscamente, la inercia de la pieza pesada en la punta causa vibración y
+flexión del brazo, afectando la precisión del ensamblaje.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 1 -- El Sistema y la Frontera}
+\addcontentsline{toc}{subsection}{Pregunta 1 -- El Sistema y la Frontera}
+%--------------------------------------------------------------
+
+\begin{itemize}
+    \item \textbf{Sistema:} El eslabón de aluminio como cuerpo continuo elástico deformable, de
+          longitud $L = 1.5$~m.
+    \item \textbf{Fronteras físicas:}
+          \begin{itemize}
+              \item \textit{Extremo base ($x = 0$):} La unión rígida con el motor/actuador. Es
+                    una frontera empotrada.
+              \item \textit{Extremo punta ($x = L$):} Donde se acopla la pieza o herramienta,
+                    que aplica fuerzas y momentos.
+              \item \textit{Frontera lateral (superficial):} La superficie exterior del eslabón,
+                    en contacto con el ambiente (puede considerarse libre de esfuerzos normales).
+          \end{itemize}
+    \item \textbf{Entrada de energía mecánica:} El \textbf{torque de frenado} aplicado por el
+          motor en la base ($x = 0$) es la entrada de energía mecánica. Cuando el motor frena
+          bruscamente, impone una deceleración angular que genera una fuerza de inercia distribuida
+          a lo largo del eslabón y una fuerza puntual de la masa en la punta, excitando los modos
+          de vibración.
+\end{itemize}
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 2 -- Parámetros del Eslabón}
+\addcontentsline{toc}{subsection}{Pregunta 2 -- Parámetros del Eslabón}
+%--------------------------------------------------------------
+
+\noindent Tres parámetros inherentes al material o geometría que determinan la flexión:
+
+\begin{enumerate}
+    \item \textbf{Módulo de Elasticidad (Módulo de Young):} $E_{Al} \approx 69$~GPa --- resistencia
+          del aluminio a la deformación elástica; mayor $E$ implica menor deflexión.
+    \item \textbf{Momento de Inercia de Área de la sección transversal:} $I$~[m\textsuperscript{4}]
+          --- depende de la forma geométrica de la sección (circular hueco, rectangular, etc.);
+          determina la rigidez a la flexión $EI$.
+    \item \textbf{Densidad lineal de masa:} $\rho A$~[kg/m] --- masa por unidad de longitud;
+          determina la inercia distribuida del eslabón y las frecuencias naturales de vibración.
+\end{enumerate}
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 3 -- Condiciones de Frontera Espaciales}
+\addcontentsline{toc}{subsection}{Pregunta 3 -- Condiciones de Frontera Espaciales}
+%--------------------------------------------------------------
+
+\noindent\textbf{Extremo base (empotrado, $x = 0$):}
+
+El desplazamiento transversal es cero y también la pendiente (rotación) es cero. Esta es una
+condición de \textbf{Dirichlet} (primer tipo) --- se prescribe directamente el valor de la
+variable dependiente:
+
+\begin{equation}
+    v(0,t) = 0 \qquad \text{y} \qquad
+    \frac{\partial v}{\partial x}\bigg|_{x=0} = 0 \qquad \text{(Dirichlet)}
+\end{equation}
+
+\noindent\textbf{Extremo punta ($x = L$):}
+
+En la punta hay una masa que ejerce una fuerza cortante específica y un momento flector conocido.
+Matemáticamente:
+
+\begin{equation}
+    EI\frac{\partial^3 v}{\partial x^3}\bigg|_{x=L} = m_{punta}\frac{\partial^2 v}{\partial t^2}
+    \bigg|_{x=L}
+\end{equation}
+
+Esta es una condición de \textbf{Neumann} (segundo tipo) --- se prescribe la derivada de la
+variable (relacionada con el cortante/momento, que son derivadas espaciales del desplazamiento).
+No se conoce el desplazamiento en la punta, sino la fuerza/momento que actúa en ella.
+
+%--------------------------------------------------------------
+\subsection*{Pregunta 4 -- El Reto Matemático (¿Parámetros concentrados o EDP?)}
+\addcontentsline{toc}{subsection}{Pregunta 4 -- El Reto Matemático}
+%--------------------------------------------------------------
+
+\noindent\textbf{Rechazamos la suposición del modelo masa-resorte-amortiguador (parámetros
+concentrados).}
+
+\noindent\textbf{Justificación física y matemática:}
+
+El eslabón de aluminio de 1.5~m es un \textbf{sólido continuo y distribuido}: en cada punto $x$
+a lo largo de su longitud existe un desplazamiento transversal $v(x,t)$ diferente. Cuando el
+brazo vibra, no se mueve como un cuerpo rígido; se \textbf{flexiona}, lo que significa que la
+deformación varía continuamente en el espacio.
+
+Un modelo masa-resorte-amortiguador (EDO) supone que toda la masa se concentra en un punto y
+que la deformación es uniforme --- esto equivale a asumir que el brazo es infinitamente rígido
+excepto en un punto, lo cual es físicamente incorrecto para un eslabón largo y esbelto.
+
+\noindent\textbf{¿Por qué la flexión exige una EDP?}
+
+La deflexión $v(x,t)$ depende tanto de la posición $x$ a lo largo del eslabón como del tiempo
+$t$. La ecuación que gobierna la vibración transversal de una viga de Euler-Bernoulli es:
+
+\begin{equation}
+    \rho A\,\frac{\partial^2 v}{\partial t^2} + EI\,\frac{\partial^4 v}{\partial x^4} = f(x,t)
+\end{equation}
+
+\noindent Esta es una \textbf{Ecuación Diferencial Parcial} (EDP) de cuarto orden en el espacio
+y segundo orden en el tiempo, con \textbf{dos variables independientes} ($x$ y $t$). Ninguna EDO
+puede capturar esta dependencia simultánea.
+
+\noindent\textbf{Consecuencias prácticas:} Un modelo concentrado predice una única frecuencia
+natural, mientras que el eslabón real tiene infinitos modos de vibración. Para garantizar
+precisión milimétrica en el ensamblaje, es indispensable conocer al menos los primeros modos
+flexurales, lo cual solo es posible con la EDP completa o su aproximación por elementos finitos
+(FEM).
+
+\end{document}
